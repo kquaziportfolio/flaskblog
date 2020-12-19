@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="entry">
+    <p>{{ip}}</p>
+    {% for entry in entries %}
+    <h1>Title: {{ entry.title }}</h1>
+    <p>Post: {{ entry.post }}</p>
+    <a href="/editentry?title={{entry.title}}&post={{entry.post}}">Edit Me!!!</a>
+    {% else %}
+    <p>post an entry plz</p>
+    {% endfor %}
+</div>
+{% endblock %}
+</html>
